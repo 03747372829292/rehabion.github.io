@@ -410,6 +410,51 @@ section{position:relative;z-index:1;padding:100px 5%}
 .form-notice{font-size:11px;color:var(--muted);text-align:center;margin-top:.75rem;font-family:var(--font-mono);letter-spacing:.04em}
 
 
+/* ── CONNECT SECTION ── */
+#connect{background:var(--deep);border-top:1px solid var(--border)}
+.connect-inner{max-width:800px;margin:0 auto;text-align:center}
+.connect-inner .section-eyebrow{justify-content:center}
+.connect-inner .section-title{text-align:center}
+.connect-inner .section-sub{text-align:center;margin:0 auto 2.5rem}
+
+.connect-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem}
+
+.connect-card{
+  background:var(--panel);border:1px solid var(--border);border-radius:12px;
+  padding:1.75rem 1.5rem;text-align:center;text-decoration:none;
+  transition:border-color .2s,transform .2s,box-shadow .2s;display:flex;
+  flex-direction:column;align-items:center;gap:.75rem;
+}
+.connect-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 12px 32px var(--blue-glow)}
+.connect-card-icon{font-size:32px;line-height:1}
+.connect-card-label{font-size:14px;font-weight:700;color:var(--white);letter-spacing:-.01em}
+.connect-card-sub{font-size:12px;color:var(--muted);line-height:1.5}
+.connect-card-tag{font-family:var(--font-mono);font-size:9px;color:var(--blue);letter-spacing:.1em;border:1px solid var(--blue-glow2);padding:2px 7px;border-radius:3px;background:var(--blue-glow);text-transform:uppercase}
+
+/* Newsletter strip */
+.newsletter-strip{
+  background:var(--panel);border:1px solid var(--border);border-radius:14px;
+  padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;
+}
+.newsletter-strip h3{font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+.newsletter-strip p{font-size:14px;color:var(--muted);line-height:1.5}
+.newsletter-form{display:flex;gap:.75rem;flex-wrap:wrap;flex-shrink:0}
+.newsletter-input{
+  background:var(--raised);border:1px solid var(--border2);border-radius:7px;
+  padding:11px 16px;color:var(--white);font-family:var(--font-head);font-size:14px;
+  outline:none;transition:border-color .2s;width:240px;
+}
+.newsletter-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-glow)}
+.newsletter-input::placeholder{color:var(--muted)}
+.newsletter-btn{
+  background:var(--blue);color:var(--void);border:none;padding:11px 20px;
+  border-radius:7px;font-family:var(--font-head);font-size:14px;font-weight:700;
+  cursor:pointer;white-space:nowrap;transition:all .2s;
+}
+.newsletter-btn:hover{background:var(--cyan);transform:translateY(-1px)}
+.newsletter-notice{font-family:var(--font-mono);font-size:10px;color:var(--muted);margin-top:.5rem;letter-spacing:.04em}
+
 /* ── FOOTER ── */
 footer{background:var(--deep);border-top:1px solid var(--border);padding:3rem 5% 2rem;position:relative;z-index:1}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
@@ -480,6 +525,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:3rem 5%
     <li><a href="#team">Team</a></li>
     <li><a href="#resources">Resources</a></li>
     <li><a href="#sponsor">Partner</a></li>
+    <li><a href="#connect">Connect</a></li>
     <li><a href="#contact" class="nav-cta">Work with us</a></li>
   </ul>
 
@@ -494,6 +540,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:3rem 5%
   <a href="#team" onclick="closeMobileNav()">Team</a>
   <a href="#resources" onclick="closeMobileNav()">Resources</a>
   <a href="#sponsor" onclick="closeMobileNav()">Partner with us</a>
+  <a href="#connect" onclick="closeMobileNav()">Connect</a>
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
 </nav>
 
@@ -812,9 +859,13 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:3rem 5%
           <div class="contact-item-icon">✉</div>
           hello@rehabion.com.pk
         </a>
+        <a href="https://wa.me/923000000000?text=Hi%20REHABION%2C%20I%20found%20your%20website%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="contact-item" role="listitem">
+          <div class="contact-item-icon">💬</div>
+          WhatsApp us directly
+        </a>
         <div class="contact-item" role="listitem">
           <div class="contact-item-icon">📍</div>
-          Rawalpindi, Punjab, Pakistan
+          Islamabad / Rawalpindi, Pakistan
         </div>
         <div class="contact-item" role="listitem">
           <div class="contact-item-icon">⏱</div>
@@ -856,6 +907,64 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:3rem 5%
       <button type="submit" class="form-submit" id="form-submit-btn">Send Message →</button>
       <p class="form-notice" id="form-status" role="status" aria-live="polite">🔒 Encrypted · We reply within 48 hours · No data sold</p>
     </form>
+  </div>
+</section>
+
+<!-- ══════════════ CONNECT ══════════════ -->
+<section id="connect" aria-labelledby="connect-title">
+  <div class="connect-inner">
+    <p class="section-eyebrow">Stay connected</p>
+    <h2 class="section-title" id="connect-title">Connect with <span>REHABION</span></h2>
+    <p class="section-sub">Follow our journey building Pakistan's first rehabilitation technology company. Get updates on new projects, research publications, and clinical breakthroughs.</p>
+
+    <div class="connect-cards">
+      <a href="https://wa.me/923000000000?text=Hi%20REHABION%2C%20I%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-card-icon">💬</div>
+        <span class="connect-card-label">WhatsApp</span>
+        <span class="connect-card-sub">Message us directly for quick queries and collaboration</span>
+        <span class="connect-card-tag">Most responsive</span>
+      </a>
+
+      <a href="mailto:hello@rehabion.com.pk" class="connect-card">
+        <div class="connect-card-icon">✉️</div>
+        <span class="connect-card-label">Email</span>
+        <span class="connect-card-sub">hello@rehabion.com.pk — for formal proposals and partnerships</span>
+        <span class="connect-card-tag">48hr reply</span>
+      </a>
+
+      <a href="https://calendly.com/rehabion/demo" target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-card-icon">📅</div>
+        <span class="connect-card-label">Book a Call</span>
+        <span class="connect-card-sub">Schedule a free 15-minute demo or discovery call instantly</span>
+        <span class="connect-card-tag">Free · 15 min</span>
+      </a>
+
+      <a href="#contact" class="connect-card">
+        <div class="connect-card-icon">🤝</div>
+        <span class="connect-card-label">Partner with Us</span>
+        <span class="connect-card-sub">Hospitals, researchers, and investors — fill out our contact form</span>
+        <span class="connect-card-tag">B2B enquiries</span>
+      </a>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter-strip">
+      <div>
+        <h3>Get our research updates</h3>
+        <p>New clinical findings, project launches, and rehab tech insights — straight to your inbox. No spam.</p>
+      </div>
+      <div>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <div style="display:flex;flex-direction:column;gap:.5rem">
+            <div style="display:flex;gap:.75rem">
+              <input type="email" class="newsletter-input" id="nl-email" placeholder="your@email.com" required maxlength="254" autocomplete="email">
+              <button type="submit" class="newsletter-btn" id="nl-btn">Subscribe →</button>
+            </div>
+            <p class="newsletter-notice" id="nl-status">🔒 No spam. Unsubscribe any time.</p>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -901,7 +1010,7 @@ footer{background:var(--deep);border-top:1px solid var(--border);padding:3rem 5%
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 REHABION. All rights reserved. Engineered in Rawalpindi, Pakistan 🇵🇰</p>
+    <p>© 2025 REHABION. All rights reserved. Engineered in Islamabad / Rawalpindi, Pakistan 🇵🇰</p>
     <div class="footer-legal">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
@@ -1028,6 +1137,27 @@ const observer=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});
 },{threshold:0.1});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// ── Newsletter form ──
+document.getElementById('newsletter-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const email=document.getElementById('nl-email').value.trim();
+  const status=document.getElementById('nl-status');
+  const btn=document.getElementById('nl-btn');
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){status.textContent='⚠ Please enter a valid email.';return;}
+  btn.disabled=true; btn.textContent='Subscribing…';
+  fetch('https://formspree.io/f/YOUR_NEWSLETTER_FORM_ID',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({email,source:'newsletter'})
+  })
+  .then(r=>r.json())
+  .then(data=>{
+    if(data.ok){status.textContent='✅ Subscribed! Watch your inbox.';btn.textContent='Subscribed ✓';btn.style.background='var(--green)';}
+    else{status.textContent='⚠ Error — email us: hello@rehabion.com.pk';btn.disabled=false;btn.textContent='Subscribe →';}
+  })
+  .catch(()=>{status.textContent='⚠ Network error — try again.';btn.disabled=false;btn.textContent='Subscribe →';});
+});
 
 // ── Contact form ──
 document.getElementById('contact-form').addEventListener('submit',function(e){
