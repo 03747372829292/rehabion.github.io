@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rehabion.com.pk/sitemap.xml
+Sitemap: https://03747372829292.github.io/sitemap.xml
