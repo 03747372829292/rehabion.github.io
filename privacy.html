@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — REHABION</title>
+<meta name="description" content="REHABION Privacy Policy. How we collect, use, and protect your information.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #080C10; --deep: #0D1117; --surface: #141B24; --raised: #1C2636;
+  --border: #243040; --teal: #00D4B8; --teal-dim: #00A896; --teal-glow: #00D4B840;
+  --white: #F0F4F8; --muted: #7A8FA6;
+  --font-head: 'Space Grotesk', sans-serif; --font-mono: 'Space Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--white); font-family: var(--font-head); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--deep); }
+::-webkit-scrollbar-thumb { background: var(--teal-dim); border-radius: 2px; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0 5%; height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(8, 12, 16, 0.95); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-icon {
+  width: 36px; height: 36px; border: 1.5px solid var(--teal); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+}
+.logo-icon::before {
+  content: ''; position: absolute; width: 18px; height: 18px;
+  border: 1.5px solid var(--teal); border-radius: 50%;
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+.logo-icon::after {
+  content: ''; width: 6px; height: 6px; background: var(--teal);
+  border-radius: 50%; position: relative; z-index: 1; box-shadow: 0 0 8px var(--teal);
+}
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(0.6); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.3; }
+}
+.logo-text { font-size: 20px; font-weight: 700; letter-spacing: 0.08em; color: var(--white); }
+.logo-text span { color: var(--teal); }
+.nav-back {
+  color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500;
+  display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+}
+.nav-back:hover { color: var(--teal); }
+
+main { max-width: 760px; margin: 0 auto; padding: 110px 5% 80px; }
+
+.page-eyebrow {
+  font-family: var(--font-mono); font-size: 11px; color: var(--teal);
+  letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 8px;
+}
+.page-eyebrow::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--teal); }
+
+h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+h1 span { color: var(--teal); }
+
+.last-updated {
+  font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+  margin-bottom: 3rem; display: block;
+}
+
+.policy-section { margin-bottom: 2.5rem; }
+.policy-section h2 {
+  font-size: 18px; font-weight: 600; margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+  letter-spacing: -0.01em;
+}
+.policy-section p, .policy-section li {
+  font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 0.75rem;
+}
+.policy-section ul { padding-left: 1.25rem; }
+.policy-section li { margin-bottom: 0.4rem; }
+.policy-section a { color: var(--teal); text-decoration: none; }
+.policy-section a:hover { text-decoration: underline; }
+
+.highlight-box {
+  background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--teal);
+  border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2rem;
+}
+.highlight-box p { color: var(--white); font-size: 15px; margin: 0; }
+
+footer {
+  background: var(--deep); border-top: 1px solid var(--border);
+  padding: 2rem 5%; text-align: center;
+}
+footer p { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+footer a { color: var(--teal); text-decoration: none; margin: 0 0.75rem; }
+footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo" aria-label="REHABION Home">
+    <div class="logo-icon" aria-hidden="true"></div>
+    <span class="logo-text">REHAB<span>ION</span></span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to site</a>
+</nav>
+
+<main>
+  <p class="page-eyebrow">Legal</p>
+  <h1>Privacy <span>Policy</span></h1>
+  <span class="last-updated">Last updated: June 2025</span>
+
+  <div class="highlight-box">
+    <p>REHABION is committed to protecting your privacy. We do not store, sell, or share patient data. This policy explains what limited data we collect through this website and how we use it.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>1. Who We Are</h2>
+    <p>REHABION is a rehabilitation technology startup based in Rawalpindi, Punjab, Pakistan. We build game-based rehabilitation systems, AI physiotherapy tools, and biomedical engineering solutions. Our website is <a href="https://rehabion.com.pk">rehabion.com.pk</a>.</p>
+    <p>For privacy matters, contact us at: <a href="mailto:hello@rehabion.com.pk">hello@rehabion.com.pk</a></p>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Information We Collect</h2>
+    <p>We only collect information you voluntarily provide through our contact form:</p>
+    <ul>
+      <li>Your name</li>
+      <li>Your email address</li>
+      <li>Your professional role (e.g., physiotherapist, researcher)</li>
+      <li>The message you write to us</li>
+    </ul>
+    <p>We do not collect, store, or process any patient medical records, health data, or personally identifiable clinical information through this website.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. How We Use Your Information</h2>
+    <p>We use contact form submissions only to:</p>
+    <ul>
+      <li>Respond to your inquiry</li>
+      <li>Discuss potential collaboration or services</li>
+      <li>Follow up on project proposals</li>
+    </ul>
+    <p>We do not use your data for marketing, profiling, or any automated decision-making.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Third-Party Services</h2>
+    <p>This website uses the following third-party services:</p>
+    <ul>
+      <li><strong>Google Fonts</strong> — loads Space Grotesk and Space Mono typefaces. Google may log font requests.</li>
+      <li><strong>Formspree</strong> — processes contact form submissions and forwards them to our email. Formspree's privacy policy applies to data transmitted via our form.</li>
+      <li><strong>GitHub Pages</strong> — hosts this website. GitHub may log IP addresses as part of standard web server logging.</li>
+      <li><strong>Google AdSense</strong> (when activated) — may serve personalised advertisements based on your browsing history. You can opt out via Google's ad settings.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Cookies</h2>
+    <p>This website does not set any first-party cookies. Third-party services (Google Fonts, AdSense) may set cookies subject to their own privacy policies. You can control cookies through your browser settings.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Data Retention</h2>
+    <p>Contact form submissions forwarded to our email are retained for as long as necessary to resolve your inquiry or maintain a professional relationship, and deleted upon your request.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request a copy of any personal data we hold about you</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your data</li>
+      <li>Withdraw consent at any time</li>
+    </ul>
+    <p>To exercise any of these rights, email us at <a href="mailto:hello@rehabion.com.pk">hello@rehabion.com.pk</a> and we will respond within 30 days.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Data Security</h2>
+    <p>We implement reasonable technical and organisational measures to protect data transmitted through this website, including HTTPS encryption. However, no internet transmission is 100% secure.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Children's Privacy</h2>
+    <p>This website is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has submitted data through our form, please contact us immediately.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. We will update the "last updated" date at the top of this page. Continued use of the website after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>11. Contact</h2>
+    <p>For any privacy concerns, please contact us:<br>
+    <a href="mailto:hello@rehabion.com.pk">hello@rehabion.com.pk</a><br>
+    REHABION, Rawalpindi, Punjab, Pakistan</p>
+  </div>
+</main>
+
+<footer>
+  <p>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="security.html">Security</a>
+  </p>
+  <p style="margin-top: 1rem;">© 2025 REHABION. All rights reserved. Rawalpindi, Pakistan.</p>
+</footer>
+
+</body>
+</html>

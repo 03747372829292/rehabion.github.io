@@ -16,8 +16,8 @@
 <meta property="og:title" content="REHABION — AI-Powered Rehabilitation Technology">
 <meta property="og:description" content="Transforming recovery through intelligent game-based rehabilitation, AI, and biomedical engineering.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://rehabion.com">
-<meta property="og:image" content="https://rehabion.com/images/og-cover.png">
+<meta property="og:url" content="https://rehabion.com.pk">
+<meta property="og:image" content="https://rehabion.com.pk/images/og-cover.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -1598,9 +1598,9 @@ footer {
       <p>Whether you're a hospital, therapist, researcher, or investor — we want to hear from you. We take on a limited number of custom projects each quarter.</p>
 
       <div class="contact-links" role="list">
-        <a href="mailto:hello@rehabion.com" class="contact-link" role="listitem">
+        <a href="mailto:hello@rehabion.com.pk" class="contact-link" role="listitem">
           <div class="contact-link-icon" aria-hidden="true">✉️</div>
-          hello@rehabion.com
+          hello@rehabion.com.pk
         </a>
         <a href="https://linkedin.com/company/rehabion" class="contact-link" target="_blank" rel="noopener noreferrer" role="listitem">
           <div class="contact-link-icon" aria-hidden="true">in</div>
@@ -1844,14 +1844,43 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   btn.disabled = true;
   btn.textContent = 'Sending…';
 
-  // In production, replace this with a real fetch() to your backend or Formspree/Netlify Forms
-  // For free launch: use https://formspree.io (free tier, no server needed)
-  setTimeout(() => {
-    status.textContent = '✅ Message received! We\'ll reply within 48 hours.';
-    btn.textContent = 'Sent ✓';
-    btn.style.background = 'var(--teal-dim)';
-    this.reset();
-  }, 1200);
+  // Formspree — sign up free at formspree.io, create a form, paste your form ID below
+  const FORMSPREE_ID = 'YOUR_FORM_ID'; // ← replace with your Formspree form ID
+
+  fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      name: safe(name),
+      email: safe(email),
+      inquiry_type: type,
+      message: safe(message)
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.ok) {
+      status.textContent = '✅ Message received! We\'ll reply within 48 hours.';
+      btn.textContent = 'Sent ✓';
+      btn.style.background = 'var(--teal-dim)';
+      this.reset();
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+        status.textContent = '🔒 Your data is encrypted and never sold. We reply within 48 hours.';
+      }, 60000);
+    } else {
+      status.textContent = '⚠ Could not send. Please email us directly at hello@rehabion.com.pk';
+      btn.disabled = false;
+      btn.textContent = 'Send Message →';
+    }
+  })
+  .catch(() => {
+    status.textContent = '⚠ Network error. Please email us at hello@rehabion.com.pk';
+    btn.disabled = false;
+    btn.textContent = 'Send Message →';
+  });
 });
 
 // ── Rate limit: disable form re-submit for 60s after success ──
